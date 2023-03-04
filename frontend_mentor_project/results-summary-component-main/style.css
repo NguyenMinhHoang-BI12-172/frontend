@@ -1,0 +1,263 @@
+:root{
+  --clr-primary-red-100: hsl(0, 100%, 67%);
+  --clr-primary-orange-yellow: hsl(39, 100%, 56%);
+  --clr-primary-green-teal: hsl(166, 100%, 37%);
+  --clr-primary-cobalt-blue: hsl(234, 85%, 45%);
+
+  --clr-grad-background-100: hsl(252, 100%, 67%);
+  --clr-grad-background-200: hsl(241, 81%, 54%);
+
+  --clr-grad-circle-200: hsla(256, 72%, 46%, 1);
+  --clr-grad-circle-900: hsla(241, 72%, 46%, 0);
+
+  --clr-neutral-red-100: hsla(17, 94%, 93%, 0.562);
+  --clr-nertral-orange-100: hsla(43, 87%, 91%, 0.562);
+  --clr-neutral-green-teal-100: hsla(180, 72%, 93%, 0.562);
+  --clr-neutral-cobalt-blue-100: hsla(235, 100%, 96%, 0.562);
+
+  --clr-neutral-white: hsl(0, 0%, 100%);
+  --clr-neutral-pale-blue: hsl(221, 100%, 96%);
+  --clr-neutral-lavender: hsl(241, 100%, 89%);
+  --clr-neutral-blue-900: hsl(224, 30%, 27%);
+  
+  --blur: hsla(215, 100%, 89%, 0.3);
+  --main-radius: 1.7rem;
+}
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  display: grid;
+  padding: 1rem;
+  place-content: center;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 1.125rem;
+}
+
+.container{
+  display: grid;
+  min-width: 300px;
+  border-radius: var(--main-radius) ;
+}
+
+.result__section{
+
+  background: linear-gradient(var(--clr-grad-background-100), var(--clr-grad-background-200));
+  border-bottom-left-radius: var(--main-radius);
+  border-bottom-right-radius: var(--main-radius);
+  color: var(--clr-neutral-white);
+  text-align: center;
+  padding: 1.8rem;
+  display: grid;
+  justify-content: center;
+}
+.score__circle{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+.result{
+  color:var(--clr-neutral-lavender);
+  font-weight: 700;
+  font-size: .9rem;
+}
+.score{
+  padding: .8rem;
+  background: linear-gradient(var(--clr-grad-circle-200), var(--clr-grad-circle-900));
+  display: grid;
+  width: 6rem;
+  height: 6rem;
+  font-weight: 800;
+  border-radius: 50%;
+  font-size: 2.4rem;
+  margin: 0 1rem;
+}
+
+.percent{
+  font-size: .78rem;
+  font-weight: 500;
+  color: var(--clr-neutral-lavender);
+}
+
+.desc{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+
+.ranking{
+  font-weight: 500;
+  font-size: .8rem;
+  max-width: 33ch;
+  padding-bottom: .5rem;
+  color: var(--clr-neutral-lavender);
+}
+
+.score__section{
+  font-size: 1rem;
+  padding: 1rem 1.3rem;
+  display: grid;
+}
+
+.score__section .summary{
+  font-weight: 700;
+}
+.skill__result__1, 
+.skill__result__2, 
+.skill__result__3,
+.skill__result__4{
+  margin-top: 1rem;
+  padding: .7rem .8rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-size: .8rem;
+  font-weight: 500;
+  border-radius: .5rem;
+  align-items: center;
+}
+
+.skill__result__1{
+  background-color: var(--clr-neutral-red-100);
+}
+
+
+.skill__result__2{
+  background-color: var(--clr-nertral-orange-100);
+}
+
+.skill__result__3{
+  background-color: var(--clr-neutral-green-teal-100);
+}
+
+.skill__result__4{
+  background-color: var(--clr-neutral-cobalt-blue-100);
+}
+.skill__section__1, 
+.skill__section__2, 
+.skill__section__3, 
+.skill__section__4{
+
+  font-weight: 700;
+  display: flex;
+}
+.skill__section__1{
+  color: var(--clr-primary-red-100);
+}
+
+.skill__section__2{
+  color: var(--clr-primary-orange-yellow);
+}
+
+.skill__section__3{
+  color: var(--clr-primary-green-teal);
+}
+
+.skill__section__4{
+  color: var(--clr-primary-cobalt-blue);
+}
+
+.logo{
+  padding-right: .7rem;
+}
+.out{
+  color: gray;
+}
+
+.continue{
+  margin-top: 1rem;
+  padding: .5rem;
+  border: none;
+  background-color: var(--clr-neutral-blue-900);
+  color: var(--clr-neutral-white);
+  border-radius: 1.4rem;
+  cursor: pointer;
+  transition: background-color .3s;
+}
+
+.continue:hover{
+  background-color: var(--clr-grad-background-200);
+}
+
+@media(min-width: 485px){
+  .container{
+    min-width: 483px;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: .6rem .8rem 1rem  var(--blur) ;
+
+  }
+
+  .result__section{
+    border-radius: var(--main-radius);
+  }
+
+  .score{
+    align-items: center;
+    font-size: 3rem;
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: 0;
+
+  }
+
+  .ranking{
+    width: 11rem;
+  }
+
+  .result{
+    margin-top: 1rem;
+  }
+
+  .percent{
+    margin-top: -2rem;
+  }
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}

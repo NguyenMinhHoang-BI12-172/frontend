@@ -1,0 +1,96 @@
+:root{
+  --clr-primary-100: hsl(0, 0%, 100%);
+  --clr-neutral-400: hsl(212, 45%, 89%);
+  --clr-neutral-500: hsl(220, 15%, 55%);
+  --clr-neutral-900: hsl(218, 44%, 22%);
+  
+  --ff-base: 'Outfit', sans-serif;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+h2{
+ line-height: 1.2; 
+}
+
+p{
+  margin: .8rem;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--clr-neutral-400);
+  font-family: var(--ff-base);
+  font-size: .9rem;
+  color: var(--clr-neutral-500);
+  display: grid;
+  place-content: center;
+  padding: 2rem;
+}
+
+.QR{
+  --content-padding: 1rem;
+  --content-spacing: .5rem;
+
+  width: 308px; 
+  background-color: var(--clr-primary-100);
+  padding: var(--content-padding);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.QR__img{
+  border-radius: 1rem;
+}
+
+.QR__details{
+  text-align: center;
+  padding: .8rem;
+}
+
+.QR__name{
+  color: var(--clr-neutral-900);
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}

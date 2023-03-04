@@ -1,0 +1,172 @@
+:root{
+  --clr-primary-orange: hsl(25, 97%, 53%);
+  --clr-primary-orange-100:hsl(25, 54%, 49%);;
+
+
+  --clr-neutral-white: hsl(0, 0%, 100%);
+  --clr-neutral-light-grey: hsl(217, 12%, 63%);
+  --clr-neutral-medium-grey: hsl(216, 12%, 54%);
+  --clr-neutral-dark-blue: hsl(213, 19%, 18%);
+  --clr-neutral-very-dark-blue: hsl(216, 12%, 8%);
+  --clr-neutral-dark-blue-100:  hsl(213, 15%, 24%);
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Overpass', sans-serif;
+  display: grid;
+  place-content: center;
+  padding: .8rem;
+  background-color: var(--clr-neutral-very-dark-blue);
+  font-size: 0.9375rem;
+}
+.container{
+  background-color: var(--clr-neutral-dark-blue);
+  padding: 1.8rem;
+  border-radius: 1rem;
+  max-width: 407px;
+}
+
+.state__1{
+  display: grid;
+}
+
+.star__icon{
+  display: inline-block;
+  background-color: var(--clr-neutral-dark-blue-100);
+  padding: .8rem;
+  border-radius: 2rem;
+  margin-top: -.4rem;
+  margin-bottom: .4rem;
+  font-size: .2px;
+}
+
+.faq{
+  min-width: 31ch;
+  margin: .5rem 0;
+  color: var(--clr-neutral-light-grey);
+}
+.buttons__array{
+  display: flex;
+  justify-content: space-between;
+}
+.rating__button{
+  text-align: center;
+  border: none;
+  width: 2.7rem;
+  height: 2.7rem;
+  border-radius: 50%;
+  background-color: var(--clr-neutral-dark-blue-100);
+  color: var(--clr-neutral-light-grey);
+  margin: 1rem 0;
+  transition: background-color .3s;
+  cursor: pointer;
+  
+  
+}
+
+.rating__button:hover{
+  background-color: var(--clr-primary-orange);
+  color: var(--clr-neutral-white);
+}
+
+.rating__button:focus{
+  background-color: var(--clr-neutral-light-grey);
+  color: var(--clr-neutral-white);
+  
+}
+.submit__button{
+  background-color: var(--clr-primary-orange);
+  border: none;
+  border-radius: 2rem;
+  padding: .6rem;
+  color: var(--clr-neutral-white);
+  text-transform: uppercase;
+  margin: .5rem 0;
+  letter-spacing: .2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color .3s;
+  
+}
+
+.submit__button:is(:hover, :focus){
+  background-color: var(--clr-neutral-white);
+  color: var(--clr-primary-orange);
+}
+.state__2{
+  display: none;
+  text-align: center;
+}
+
+.thank__you__logo{
+  display: grid;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.text{
+  display: inline-block;
+  color: var(--clr-primary-orange-100);
+  background-color: var(--clr-neutral-dark-blue-100);
+  border-radius: 1rem;
+  padding: .2rem .8rem;
+  margin: 1rem;
+
+}
+
+.thank__paragraph{
+  color: var(--clr-neutral-light-grey);
+  margin: .6rem 0;
+}
+
+
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+h2{
+  color: var(--clr-neutral-white);
+}
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
